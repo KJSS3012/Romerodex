@@ -89,8 +89,16 @@ padding-bottom: 15px;
 
 /*HOME PAGE - END*/
 
-
 /*OWNERS PAGE*/
+.body-owners{
+    background-image: url(../_image/pokeball.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 25%;
+    background-attachment: fixed;
+}
 .header-owners{
     background-color: #E3293B;
     display: flex;
@@ -99,7 +107,7 @@ padding-bottom: 15px;
     padding: 0 20px;
 }
 
-.button-h-owners{
+.button-h{
     border-radius: 100px;
     border: none;
     padding: 1rem;
@@ -109,7 +117,7 @@ padding-bottom: 15px;
     margin: 10px 0;
 }
 
-.button-h-owners:hover{
+.button-h:hover{
     cursor: pointer;
     background-color: #1C3144;
     color: white;
@@ -117,5 +125,68 @@ padding-bottom: 15px;
 
 .main-owners{
     display: flex;
+    justify-content: space-around;
+}
+
+.section1-owners{
+    margin-left: 2%;
+    margin-right: 2%;
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 30%;
+    font-size: 1em;
+}
+
+.section2-owners{
+    margin-left: 2%;
+    margin-right: 2%;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    right: 0;
+    top: 30%;
+    font-size: 1em;
+}
+
+@media (max-width:730px) {
+    .section1-owners{
+        font-size: 0.8rem;
+    }
+
+    .section2-owners{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:530px) {
+    .section1-owners{
+        font-size: 0.73rem;
+    }
+
+    .section2-owners{
+        font-size: 0.73rem;
+    }
+}
+
+.p-owners{
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.div1-f-owners{
+    background-color: #E3293B;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 16%;
+}
+
+.div2-f-owners{
+    background-color: #1C3144;
+    width: 100%;
+    position: fixed;
+    height: 8%;
+    bottom: 0;
 }
 /*OWNERS PAGE - END*/

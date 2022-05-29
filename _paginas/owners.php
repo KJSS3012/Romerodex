@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Os Cabeças Por Trás</title>
+    <title>Criadores</title>
 </head>
-<body>
+<body class = "body-owners">
     <header class = "header-owners">
-        <img src="_image/Logo.png" alt="RomeroDex" class ="logo">
-        <button class = "button-h-owners">Voltar</button>
+        <img src="../_image/Logo.png" alt="RomeroDex" class ="logo">
+        <button class = "button-h" onclick = "link_homepage()">Voltar</button>
     </header>
     <main class = "main-owners">
-        <img src="_image/pokeball.png" alt="Background Pokeball">
         <section class = "section1-owners">
             <p class = "p-owners">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat massa, pulvinar in arcu at, aliquet tempus lacus. Morbi dictum interdum velit vitae porttitor. Nam non turpis urna. Donec efficitur vitae quam ac accumsan. Proin egestas ornare facilisis. Aliquam erat volutpat. Integer eget egestas mi. Vestibulum ullamcorper at est in accumsan.</p>
         </section>
