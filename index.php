@@ -8,9 +8,7 @@
         if ($uri === $rota) {
             include __DIR__ . $arquivo;
             exit();
-        }else{
-            include __DIR__ . "/_paginas/error.php";
         }
     }
-    
+    include (__DIR__ . "/_paginas/error.php");
 ?>
