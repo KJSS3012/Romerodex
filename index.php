@@ -7,21 +7,22 @@
     <title>RomeroDex - Início</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 <body>
     <header class = "header-homepage">
-        <img src="_image/Logo.png" alt="RomeroDex" class ="logo-homepage">
+        <img src="_image/Logo.png" alt="RomeroDex" class ="logo">
     </header>
     <main class = "main-homepage">
         <section class = "section1-homepage">
             <div class = "div-s1-homepage">
-                <h1>Bem-Vindo a Romerodex, o melhor sistema de registro de romeros que existe em todo o mundo!</h1>
+                <h1>Bem-Vindo a Romerodex, o melhor sistema de registro de romeromons que existe em todo o mundo!</h1>
             </div>
         </section>
         <section class = "section2-homepage">
             <div class = "div-s2-homepage">
-                <input type="button" value="Histórico" class = "button-homepage">
-                <input type="button" value="Registrar" class = "button-homepage">
-                <input type="button" value="Criadores" class = "button-homepage">
+                <button class = "button-homepage">Histórico<span class="iconify-inline" data-icon="mdi:pokeball" data-width="38" data-height="38" style="color: #e3293b;"></span></button>
+                <button class = "button-homepage">Registrar<span class="iconify-inline" data-icon="mdi:pokeball" data-width="38" data-height="38" style="color: #e3293b;"></span></button>
+                <button class = "button-homepage">Criadores<span class="iconify-inline" data-icon="mdi:pokeball" data-width="38" data-height="38" style="color: #e3293b;"></span></button>
             </div>
         </section>
     </main>
