@@ -19,6 +19,7 @@ body{
 width: 16rem;
 padding-top: 15px;
 padding-bottom: 15px;
+cursor: pointer;
 }
 
 /*HOME PAGE*/
@@ -190,3 +191,67 @@ padding-bottom: 15px;
     bottom: 0;
 }
 /*OWNERS PAGE - END*/
+
+/*ERROR PAGE*/
+.header-error{
+    background-color: #E3293B;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.main-error{
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.image-s1-error{
+    width: 83%;
+}
+
+.section2-error{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.div1-m-error{
+    background-color: #E3293B;
+    color: white;
+    margin-bottom: 20px;
+    width: 70%;
+    padding: 15px;
+}
+
+.h1-s2-error{
+    font-size: 3rem;
+}
+
+.div2-m-error{
+    padding: 0 20px;
+}
+
+.p-error{
+    text-align: justify;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.div1-f-error{
+    background-color: #E3293B;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 16%;
+}
+
+.div2-f-error{
+    background-color: #1C3144;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+}
+/*ERROR PAGE - END*/

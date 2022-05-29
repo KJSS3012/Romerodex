@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class = "header-register">
-        <img src="../_image/Logo.png" alt="RomeroDex" class ="logo">
+        <img src="../_image/Logo.png" alt="RomeroDex" class ="logo" onclick = "link_homepage()">
         <button class = "button-h" onclick = "link_homepage()">Voltar</button>
     </header>
     <main class = "main-register">

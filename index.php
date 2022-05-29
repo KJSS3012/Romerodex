@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../_paginas/style.css">
+<link rel="stylesheet" href="_paginas/style.css">
 <script src="/_js/path.js"></script>
 <?php
     $uri = $_SERVER['REQUEST_URI'];
@@ -8,6 +8,8 @@
         if ($uri === $rota) {
             include __DIR__ . $arquivo;
             exit();
+        }else{
+            include __DIR__ . "/_paginas/error.php";
         }
     }
     
