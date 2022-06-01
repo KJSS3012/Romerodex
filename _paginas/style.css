@@ -200,14 +200,19 @@ cursor: pointer;
 }
 
 .main-error{
-    display: flex;
     padding-top: 30px;
-    justify-content: space-between;
-    margin-right: 10px;
 }
 
 .image-s1-error{
-    width: 83%;
+    width: 650px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+@media (max-width:1083px) {
+    .image-s1-error{
+        opacity: 0.1;
+    }
 }
 
 .section2-error{
@@ -215,6 +220,10 @@ cursor: pointer;
     flex-direction: column;
     text-align: center;
     padding-top: 70px;
+    position: absolute;
+    left: 60%;
+    transition: 0.4s;
+    margin-right: 10px;
 }
 
 .div1-m-error{
@@ -223,20 +232,51 @@ cursor: pointer;
     margin-bottom: 20px;
     width: 70%;
     padding: 15px;
+    transition: 0.2s;
+}
+
+@media (max-width:1083px) {
+    .div1-m-error{
+        width: 80%;
+    }
+    .section2-error{
+        left: 55%;
+    }
+}
+
+@media (max-width:700px) {
+    .div1-m-error{
+        width: 90%;
+    }
+    .section2-error{
+        left: 50%;
+    }
+}
+
+@media (max-width:550px) {
+    .div1-m-error{
+        width: 72%;
+    }
+    .section2-error{
+        left: 21%;
+    }
 }
 
 .h1-s2-error{
-    font-size: 3rem;
+    transition: 0.2s;
+    font-size: 2.8rem;
 }
 
 .div2-m-error{
-    padding: 0 20px;
+    width: 70%;
+    padding: 0 10px;
 }
 
 .p-error{
     text-align: justify;
-    width: 60%;
+    width: 100%;
     font-size: 1.2rem;
+    transition: 0.2s;
 }
 
 .div1-f-error{
