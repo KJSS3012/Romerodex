@@ -10,3 +10,6 @@ function link_list() {
 function link_register() {
     location.href = "/register"
 }
+function link_list() {
+    location.href = "/list"
+}
