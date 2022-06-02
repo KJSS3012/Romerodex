@@ -295,3 +295,130 @@ cursor: pointer;
     height: 8%;
 }
 /*ERROR PAGE - END*/
+
+/*REGISTER PAGE*/
+.body-register{
+overflow: hidden;
+}
+
+.header-register{
+    position: relative;
+    background-color: #E3293B;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.section1-register{
+    padding-top: 30px;
+}
+
+.div1-s1-register{
+    position: relative;
+    background-color: #E3F2FD;
+    padding: 1rem;
+    z-index: 2;
+    text-align: center;
+    width: 60%;
+}
+
+.h1-s1-register{
+   position: relative;
+   right: 5%;
+}
+
+.div2-s1-register{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 30%;
+    position: absolute;
+    left: 8%;
+    top: 43%;
+}
+
+.input-s1{
+    padding: 3%;
+    border: none;
+}
+
+.input2-s1{
+    padding: 5%;
+    border: none;
+}
+
+.input-s1:focus{
+    outline: none;
+}
+
+.input2-s1:focus{
+    outline: none;
+}
+
+.label-register{
+    padding: 15px 10px;
+    width: 100%;
+    background-color: #1C3144;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.label-register:hover{
+    background-color: #CC3342;
+}
+
+#imageRomero{
+    display: none;
+}
+
+.button-register{
+    border: none;
+    padding: 5%;
+    background-color: #E3F2FD;
+    cursor: pointer;
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.button-register:hover{
+    background-color: #FFCC03;
+
+}
+
+.div1-s2-register{
+    background-color: #1C3144;
+    padding: 1rem;
+    position: absolute;
+    top: 18.7%;
+    right: 0;
+    width: 40%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.div2-s2-register{
+    position: absolute;
+    background-color: #CC3342;
+    transform: rotate(17deg);
+    width: 170px;
+    height: 650px;
+    left: 48%;
+    top: 6%;
+    z-index: 1;
+}
+
+.div3-s2-register{
+    position: absolute;
+    background-color: #DB5461;
+    width: 560px;
+    height: 600px;
+    right: 0;
+    bottom: 0;
+}
