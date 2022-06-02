@@ -21,12 +21,14 @@
                 <h1 class="h1-s1-register">Registrar</h1>
             </div>
             <div class="div2-s1-register">
-                <input type="text" name="" id="" class="input-s1" placeholder="Nome do Treinador">
-                <input type="text" name="" id="" class="input-s1" placeholder="Nome do Romeromon">
-                <input type="text" name="" id="" placeholder="Descrição" class="input2-s1">
-                <label for="imageRomero" class="label-register">Anexar Imagem</label>
-                <input type="file" name="" id="imageRomero">
-                <button class="button-register">Enviar</button>
+                <form action="../_config/database.php" method="get">
+                    <input type="text" name="nt" id="" class="input-s1" placeholder="Nome do Treinador">
+                    <input type="text" name="nr" id="" class="input-s1" placeholder="Nome do Romeromon">
+                    <input type="text" name="dc" id="" placeholder="Descrição" class="input2-s1">
+                    <label for="imageRomero" class="label-register">Anexar Imagem</label>
+                    <input type="file" name="im" id="imageRomero">
+                    <button class="button-register">Enviar</button>
+                </form>
             </div>
         </section>
         <section class="section2-register">

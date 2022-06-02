@@ -2,7 +2,7 @@
 <script src="/_js/path.js"></script>
 <?php
 $uri = $_SERVER['REQUEST_URI'];
-$caminho = require __DIR__ . "/rotas.php";
+$caminho = require __DIR__ . "/_config/rotas.php";
 
 foreach ($caminho as $rota => $arquivo) {
     if ($uri === $rota) {
