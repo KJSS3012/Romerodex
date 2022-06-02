@@ -2,7 +2,7 @@ function link_owners() {
     location.href = "/about";
 }
 function link_homepage(){
-    location.href = "/";
+    location.href = "/home";
 }
 function link_list() {
     location.href = "/list"
