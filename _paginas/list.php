@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
   <title>Histórico</title>
 </head>
 
@@ -16,8 +15,12 @@
   </header>
   <main class="main-list">
     <div class="div1-m">
-      <img src="" alt="">
-      <p class="p-div1-m"></p>
+      <!-- <img src="" alt=""> -->
+      <?php
+      while ($row = $result->fetchArray()) {
+        echo '<p class = "p-div1-m">' . $row['NomeDoRomeromon'] . '</p>';
+      }
+      ?>
     </div>
   </main>
   <footer class="footer-list">

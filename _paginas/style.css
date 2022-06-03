@@ -326,10 +326,10 @@ overflow: hidden;
 
 .h1-s1-register{
    position: relative;
-   right: 5%;
+   right: 12%;
 }
 
-.div2-s1-register{
+form{
     display: flex;
     flex-direction: column;
     row-gap: 15px;
@@ -388,7 +388,6 @@ overflow: hidden;
 
 .button-register:hover{
     background-color: #FFCC03;
-
 }
 
 .div1-s2-register{
@@ -423,4 +422,47 @@ overflow: hidden;
     bottom: 0;
 }
 
+#image{
+    position: absolute;
+    width: 50%;
+    top: 33%;
+    left: 35%;
+    border-radius: 50px;
+}
+
 /*REGISTER PAGE - END*/
+
+/*LIST PAGE*/
+
+.header-list{
+    position: relative;
+    background-color: #E3293B;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.main-list{
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+}
+
+.div1-m{
+    padding-left: 30px;
+}
+
+.p-div1-m{
+    font-size: 20px;
+}
+
+.div1-f-list{
+    background-color: #E3293B;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 16%;
+}
+
+/*LIST PAGE - END*/

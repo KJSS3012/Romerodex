@@ -21,7 +21,7 @@
                 <h1 class="h1-s1-register">Registrar</h1>
             </div>
             <div class="div2-s1-register">
-                <form action="../_config/database.php" method="get">
+                <form action="/_config/database.php" method="POST">
                     <input type="text" name="nt" id="" class="input-s1" placeholder="Nome do Treinador">
                     <input type="text" name="nr" id="" class="input-s1" placeholder="Nome do Romeromon">
                     <input type="text" name="dc" id="" placeholder="Descrição" class="input2-s1">
@@ -37,7 +37,7 @@
             </div>
             <div class="div2-s2-register"></div>
             <div class="div3-s2-register">
-                <img src="#" alt="" id="image">
+                <img src="../_image/Romeroju.png" alt="Romeroju" id="image">
             </div>
         </section>
     </main>
