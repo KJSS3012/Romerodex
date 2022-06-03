@@ -17,6 +17,7 @@
     <div class="div1-m">
       <!-- <img src="" alt=""> -->
       <?php
+      global $result;
       while ($row = $result->fetchArray()) {
         echo '<p class = "p-div1-m">' . $row['NomeDoRomeromon'] . '</p>';
       }
