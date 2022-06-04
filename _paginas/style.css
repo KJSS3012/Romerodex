@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ruda', sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
 }
-
+.bold{
+    font-weight: bold;
+}
 h1{
     font-size: 1.5rem;
 }
@@ -445,8 +447,11 @@ form{
 }
 
 .main-list{
+    padding-top: 6%;
     display: grid;
-    grid-template-columns: 20% 20% 20%;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 3%;
+    row-gap: 30%;
 }
 
 .div1-m{

@@ -14,15 +14,25 @@
     <button class="button-h" onclick="link_homepage()">Voltar</button>
   </header>
   <main class="main-list">
-    <div class="div1-m">
-      <!-- <img src="" alt=""> -->
+    <!-- <img src="" alt=""> -->
+    <?php
+    $db = require(__DIR__ . '/../_config/database.php');
+    $resultado = $db->query('SELECT * FROM Romeromons');
+    while ($linha = $resultado->fetchArray()) {
+      echo '<div class = "div1-m"><p class = "p-div1-m"><span class = "bold">Treinador:</span> ' . $linha['NomeDoTreinador'] . '<br/><span class = "bold">Romeromon:</span> ' . $linha['NomeDoRomeromon'] . '</p></div>';
+    }
+    ?>
+    <style>
       <?php
-      global $result;
-      while ($row = $result->fetchArray()) {
-        echo '<p class = "p-div1-m">' . $row['NomeDoRomeromon'] . '</p>';
-      }
+      include __DIR__ . "/../_paginas/style.css";
       ?>
-    </div>
+    </style>
+
+    <script>
+      <?php
+      include __DIR__ . "/../_js/path.js";
+      ?>
+    </script>
   </main>
   <footer class="footer-list">
     <div class="div1-f-list"></div>
