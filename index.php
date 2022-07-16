@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="_paginas/style.css">
+<link rel="stylesheet" href="Config/css/style.css">
+<link rel="stylesheet" href="Config/css/login.css">
 <link rel="shortcut icon" href="_image/Romeroball_icon.png" type="image/x-icon">
 <script src="/_js/path.js"></script>
 
