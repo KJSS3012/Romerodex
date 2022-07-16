@@ -15,6 +15,7 @@ h1{
 
 body{
     background-color: #D1D1D1;
+    overflow: hidden;
 }
 
 .logo{
@@ -23,6 +24,97 @@ padding-top: 15px;
 padding-bottom: 15px;
 cursor: pointer;
 }
+
+/*LOGIN PAGE*/
+
+.section1-login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1-s1-login {
+    margin: 5px;
+}
+
+  .div2-s1-login {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #181920;
+    height: 350px;
+    width: 350px;
+    padding: 25px;
+}
+  
+  .image-login {
+    width: 65px;
+    height: auto;
+}
+  
+  .div1-s1-login form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .div1-s1-login form input {
+    padding: 0 15px;
+    margin-top: 12px;
+    background-color: #252a3a;
+    font-size: 14px;
+    color: #cbd0f7;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    height: 45px;
+    transition: all 400ms;
+  }
+  
+  .div1-s1-login form input:focus{
+    background-color: #333a50;
+  }
+  
+  .div1-s1-login form input::placeholder {
+    color: #cbd0f7;
+    font-size: 14px;
+  }
+  
+  .div1-s1-login form input[type="submit"] {
+    display: block;
+    background-color: #5568fe;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 400ms;
+  }
+  
+  .div1-s1-login form input[type="submit"]:hover {
+    background-color: #6577ff;
+    transform: scale(1.02);
+  }
+  
+  .div3-s1-login {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .div3-s1-login p {
+    color: #cbd0f7;
+  }
+  
+  .div3-s1-login a {
+    color: #5568fe;
+    text-decoration: none;
+  }
+
+/*LOGIN PAGE - END*/
 
 /*HOME PAGE*/
 

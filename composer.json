@@ -1,0 +1,17 @@
+{
+    "name": "cfhjk/romerodex",
+    "description": "Um site para registrar os treinadores e seus romeromons",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Cfhjk\\Romerodex\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CFHJK",
+            "email": "kaique30122004@gmail.com"
+        }
+    ],
+    "require": {}
+}
