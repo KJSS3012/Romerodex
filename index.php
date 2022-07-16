@@ -4,14 +4,18 @@
 
 
 <?php
-$uri = $_SERVER['REQUEST_URI'];
-$caminho = require __DIR__ . "/_config/rotas.php";
 
-foreach ($caminho as $rota => $arquivo) {
-    if ($uri === $rota) {
-        include __DIR__ . $arquivo;
-        exit();
-    }
-}
-include(__DIR__ . "/_paginas/error.php");
-?>
+require __DIR__ . '/vendor/autoload.php';
+
+use Cfhjk\Romerodex\App\Application;
+
+//carregando as rotas da aplicação
+$router = require_once __DIR__ . '/web.php';
+
+//criando conexao e tabelas no banco
+require_once __DIR__ . '/database.php';
+
+$app = new Application($router);
+
+//recebe requisição e retorna página
+$app->send();
