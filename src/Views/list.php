@@ -10,27 +10,27 @@
 
 <body>
   <header class="header-list">
-    <img src="../_image/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
+    <img src="../../Config/image/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
     <button class="button-h" onclick="link_homepage()">Voltar</button>
   </header>
   <main class="main-list">
     <!-- <img src="" alt=""> -->
     <?php
-    $db = require(__DIR__ . '/../_config/database.php');
-    $resultado = $db->query('SELECT * FROM Romeromons');
-    while ($linha = $resultado->fetchArray()) {
-      echo '<div class = "div1-m"><p class = "p-div1-m"><span class = "bold">Treinador:</span> ' . $linha['NomeDoTreinador'] . '<br/><span class = "bold">Romeromon:</span> ' . $linha['NomeDoRomeromon'] . '</p></div>';
+    session_start();
+    $statement = self::$conexao->prepare('SELECT nome FROM Romeromons where user_nome = ' . $_SESSION['user'] . '');
+    while ($linha = $statement->fetchArray()) {
+      echo '<div class = "div1-m"><p>Romeromon:</span> ' . $linha['NomeDoRomeromon'] . '</p></div>';
     }
     ?>
     <style>
       <?php
-      include __DIR__ . "/../_paginas/style.css";
+      include __DIR__ . "/../../Config/css/style.css";
       ?>
     </style>
 
     <script>
       <?php
-      include __DIR__ . "/../_js/path.js";
+      include __DIR__ . "/../../Config/js/path.js";
       ?>
     </script>
   </main>

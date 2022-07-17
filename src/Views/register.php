@@ -1,3 +1,18 @@
+<?php
+
+use Cfhjk\Romerodex\Models\Romeromon;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //SALVAR USUÁRIO E REDIRECIONAR PARA DASHBOARD
+    if (isset($_POST['nr'], $_POST['dc'])) {
+
+        $romeromon = new Romeromon($_POST['nr'], $_POST['dc']);
+
+        $romeromon->save();
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,11 +23,11 @@
     <link rel="stylesheet" href="style.css">
     <title>Registre seu Romeromon</title>
 </head>
-<script src="../_js/image.js"></script>
+<script src="../../Config/js/path.js"></script>
 
 <body class="body-register">
     <header class="header-register">
-        <img src="../_image/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
+        <img src="../../Config/image/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
         <button class="button-h" onclick="link_homepage()">Voltar</button>
     </header>
     <main class="main-register">
@@ -21,8 +36,7 @@
                 <h1 class="h1-s1-register">Registrar</h1>
             </div>
             <div class="div2-s1-register">
-                <form action="/_config/save.php" method="POST" class="form-div2-register">
-                    <input type="text" name="nt" id="" class="input-s1" placeholder="Nome do Treinador">
+                <form action="/registerRm" method="POST" class="form-div2-register">
                     <input type="text" name="nr" id="" class="input-s1" placeholder="Nome do Romeromon">
                     <input type="text" name="dc" id="" placeholder="Descrição" class="input2-s1">
                     <label for="imageRomero" class="label-register">Anexar Imagem</label>
@@ -37,7 +51,7 @@
             </div>
             <div class="div2-s2-register"></div>
             <div class="div3-s2-register">
-                <img src="../_image/Romeroju.png" alt="Romeroju" id="image">
+                <img src="../../Config/image/Romeroju.png" alt="Romeroju" id="image">
             </div>
         </section>
     </main>

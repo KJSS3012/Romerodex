@@ -10,11 +10,11 @@
 
 <body>
     <header class="header-error">
-        <img src="../_image/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
+        <img src="../../Config/image/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
     </header>
     <main class="main-error">
         <section class="section1-error">
-            <img src="../_image/pikachu.png" alt="" class="image-s1-error">
+            <img src="../../Config/image/pikachu.png" alt="" class="image-s1-error">
         </section>
         <section class="section2-error">
             <div class="div1-m-error">

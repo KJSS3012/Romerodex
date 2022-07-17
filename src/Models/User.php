@@ -6,20 +6,22 @@ class User extends Model
 {
     protected $username;
     protected $password;
+    protected $email;
 
-    public function __construct($username, $password)
+    public function __construct($username, $password, $email)
     {
         $this->username = $username;
+        $this->email = $email;
         $this->password = password_hash($password, PASSWORD_BCRYPT);
     }
 
     public function save()
     {
 
-        $statement = self::$conexao->prepare("INSERT INTO users(username, password) VALUES (:u, :p)");
+        $statement = self::$conexao->prepare("INSERT INTO users(nome, senha, email) VALUES (:u, :p, :e)");
         $statement->bindValue(':u', $this->username, SQLITE3_TEXT);
         $statement->bindValue(':p', $this->password, SQLITE3_TEXT);
-
+        $statement->bindValue(':e', $this->email, SQLITE3_TEXT);
 
         return $statement->execute();
     }
@@ -27,7 +29,7 @@ class User extends Model
     static function exists($username, $password)
     {
 
-        $sttm = self::$conexao->prepare("SELECT * FROM users WHERE username = :user;");
+        $sttm = self::$conexao->prepare("SELECT * FROM users WHERE nome = :user;");
         $sttm->bindValue(':user', $username, SQLITE3_TEXT);
 
         $result = $sttm->execute();

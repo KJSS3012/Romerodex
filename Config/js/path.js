@@ -8,7 +8,7 @@ function link_list() {
     location.href = "/list"
 }
 function link_register() {
-    location.href = "/register"
+    location.href = "/registerRm"
 }
 function link_list() {
     location.href = "/list"

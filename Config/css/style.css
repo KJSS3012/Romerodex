@@ -24,6 +24,9 @@ body{
     padding-bottom: 15px;
     cursor: pointer;
 }
+/*REGISTER PAGE*/
+
+/*REGISTER PAGE END*/
 
 /*LOGIN PAGE*/
 .login-image{
@@ -176,7 +179,7 @@ body{
 
 /*OWNERS PAGE*/
 .body-owners{
-    background-image: url(../_image/pokeball.png);
+    background-image: url(../../Config/image/pokeball.png);
     background-repeat: no-repeat;
     background-size: auto;
     background-position-x: 50%;
@@ -478,7 +481,7 @@ overflow: hidden;
     background-color: #1C3144;
     padding: 1rem;
     position: absolute;
-    top: 18.7%;
+    top: 19%;
     right: 0;
     width: 40%;
     text-align: center;

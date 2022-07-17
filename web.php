@@ -17,6 +17,9 @@ $router->post('/login', '/Views/auth/login.php');
 $router->get('/logar', '/Views/auth/login.php');
 $router->post('/logar', '/Views/auth/login.php');
 
+$router->get('/registerRm', '/Views/register.php');
+$router->post('/registerRm', '/Views/register.php');
+
 $router->get('/about', '/Views/owners.php');
 $router->get('/sobre', '/Views/owners.php');
 

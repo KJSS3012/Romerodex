@@ -1,11 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['user'])) {
-    //mando para login
-    header("Location: /login");
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,7 +12,7 @@ if (!isset($_SESSION['user'])) {
 
 <body>
     <header class="header-homepage">
-        <img src="../_image/Logo.png" alt="RomeroDex" class="logo">
+        <img src="../../Config/image/Logo.png" alt="RomeroDex" class="logo">
     </header>
     <main class="main-homepage">
         <section class="section1-homepage">
