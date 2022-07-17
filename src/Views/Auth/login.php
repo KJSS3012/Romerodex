@@ -43,8 +43,8 @@ if ($method === 'POST') {
                 <input type="submit" value="Entrar">
             </form>
             <div class="div3-s1-login">
-                <p></p>
-                <a href=""></a>
+                <p>Não possui uma conta?</p>
+                <a href="register.php">Cadastre-se</a>
             </div>
         </div>
     </section>
