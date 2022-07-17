@@ -19,7 +19,7 @@
                 <input type="text" name="name" placeholder="Seu nome de treinador" autofocus required>
                 <input type="email" name="name" placeholder="Seu email" required>
                 <input type="password" name="senha" placeholder="Sua senha" required>
-                <input type="submit" value="Entrar">
+                <input type="submit" value="Cadastrar">
             </form>
         </div>
     </section>
