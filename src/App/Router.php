@@ -49,7 +49,7 @@ class Router
             }
         }
 
-        include_once(__DIR__ . '/..' . $this->get['/Viwes/error'] . '.php');
+        include_once(__DIR__ . '/..' . $this->get['/error'] . '.php');
         exit;
     }
 
