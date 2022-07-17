@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             session_start();
             $_SESSION['user'] = $username;
             $_SESSION['id'] = session_id() . $username;
+            echo "ola";
             header("Location: /home");
             exit;
         } else {

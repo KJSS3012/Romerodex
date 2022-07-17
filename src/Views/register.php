@@ -1,14 +1,18 @@
 <?php
 
+use Cfhjk\Romerodex\Models\Pokeball;
 use Cfhjk\Romerodex\Models\Romeromon;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //SALVAR USUÁRIO E REDIRECIONAR PARA DASHBOARD
-    if (isset($_POST['nr'], $_POST['dc'])) {
+    if (isset($_POST['nr'], $_POST['dc'], $_POST['pk'])) {
 
         $romeromon = new Romeromon($_POST['nr'], $_POST['dc']);
+        $pokeball = new Pokeball($_POST['pk']);
 
         $romeromon->save();
+        $pokeball->save();
+        header("Location: /register");
     }
 }
 
@@ -39,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <form action="/registerRm" method="POST" class="form-div2-register">
                     <input type="text" name="nr" id="" class="input-s1" placeholder="Nome do Romeromon">
                     <input type="text" name="dc" id="" placeholder="Descrição" class="input2-s1">
+                    <input type="text" name="pk" id="" placeholder="Pokebola" class="input-s1">
                     <label for="imageRomero" class="label-register">Anexar Imagem</label>
                     <input type="file" name="im" id="imageRomero">
                     <button class="button-register">Enviar</button>

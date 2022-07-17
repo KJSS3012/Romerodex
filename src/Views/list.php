@@ -16,10 +16,13 @@
   <main class="main-list">
     <!-- <img src="" alt=""> -->
     <?php
+
+    use Cfhjk\Romerodex\Models\Model;
+
     session_start();
     $statement = self::$conexao->prepare('SELECT nome FROM Romeromons where user_nome = ' . $_SESSION['user'] . '');
     while ($linha = $statement->fetchArray()) {
-      echo '<div class = "div1-m"><p>Romeromon:</span> ' . $linha['NomeDoRomeromon'] . '</p></div>';
+      echo '<div class = "div1-m"><p>' . $linha['NomeDoRomeromon'] . '</p></div>';
     }
     ?>
     <style>

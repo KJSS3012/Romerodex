@@ -35,7 +35,7 @@ class User extends Model
         $result = $sttm->execute();
         $row = $result->fetchArray();
         if (isset($row)) {
-            return password_verify($password, $row['password']) ? true : false;
+            return password_verify($password, $row['senha']) ? true : false;
         }
 
         return false;

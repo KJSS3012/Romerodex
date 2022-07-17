@@ -11,8 +11,12 @@
 <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
 <body>
-    <header class="header-homepage">
-        <img src="../../Config/image/Logo.png" alt="RomeroDex" class="logo">
+    <header class="header-register">
+        <img src="../../Config/image/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
+        <form action="/logout" method="post">
+            <button class="button-h">Sair</button>
+        </form>
+
     </header>
     <main class="main-homepage">
         <section class="section1-homepage">
