@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $romeromon->save();
         $pokeball->save();
-        header("Location: /register");
+        header("Location: /registerRm");
     }
 }
 

@@ -8,7 +8,6 @@ class Pokeball extends Model
 
     public function __construct($username)
     {
-        session_start();
         $this->username = $username;
     }
 

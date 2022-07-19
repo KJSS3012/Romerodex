@@ -14,16 +14,12 @@
     <button class="button-h" onclick="link_homepage()">Voltar</button>
   </header>
   <main class="main-list">
-    <!-- <img src="" alt=""> -->
     <?php
 
-    use Cfhjk\Romerodex\Models\Model;
+    use Cfhjk\Romerodex\Models\User;
 
-    session_start();
-    $statement = self::$conexao->prepare('SELECT nome FROM Romeromons where user_nome = ' . $_SESSION['user'] . '');
-    while ($linha = $statement->fetchArray()) {
-      echo '<div class = "div1-m"><p>' . $linha['NomeDoRomeromon'] . '</p></div>';
-    }
+    User::showRm();
+
     ?>
     <style>
       <?php

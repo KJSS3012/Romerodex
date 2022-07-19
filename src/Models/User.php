@@ -40,4 +40,16 @@ class User extends Model
 
         return false;
     }
+
+    public static function showRm()
+    {
+        session_start();
+        $username = $_SESSION['user'];
+        $sttm = self::$conexao->query('SELECT * FROM romeromons');
+        while ($linha = $sttm->fetchArray()) {
+            if ($username == $linha['usernome']) {
+                echo '<div class = "div1-m"><p>' . $linha['nome'] . '</p></div>';
+            }
+        }
+    }
 }
