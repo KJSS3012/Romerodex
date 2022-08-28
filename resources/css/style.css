@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Kdam Thmor Pro', sans-serif;
+    overflow: hidden;
 }
 .bold{
     font-weight: bold;
@@ -384,9 +385,6 @@ body{
 /*ERROR PAGE - END*/
 
 /*REGISTER PAGE*/
-.body-register{
-overflow: hidden;
-}
 
 .header-register{
     position: relative;
@@ -556,3 +554,65 @@ overflow: hidden;
 }
 
 /*LIST PAGE - END*/
+
+/*REGISTER-USER PAGE*/
+
+.section-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .section_div-register {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.section_div_image-register {
+    margin: 10px 0;
+  }
+
+.section_div_image_pokeball-register{
+    width: 150px;
+  }
+  
+  .section_div_form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section_div_form-register input {
+    font-weight: bold;
+    padding: 0 15px;
+    margin-top: 12px;
+    background-color: #E3F2FD;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    height: 45px;
+  }
+  
+  .section_div_form-register input::placeholder {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+  }
+  
+  .section_div_form-register input[type="submit"] {
+    color: #E3F2FD;
+    background-color: #DB5461;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 400ms;
+  }
+  
+  .section_div_form-register input[type="submit"]:hover {
+    background-color: #CC3342;
+  }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Login</title>
 </head>
 
@@ -12,7 +14,7 @@
     <section class="section1-login">
         <div class="div1-s1-login">
             <div class="div2-s1-image">
-                <img class="login-image" src="../../../Config/image/pokeball.png" alt="logo">
+                <img class="login-image" src="../../img/pokeball.png" alt="logo">
             </div>
             <form class="form1-s1-login" action="{{url('/login')}}" method="POST">
                 @csrf
