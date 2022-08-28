@@ -12,7 +12,8 @@ class Romeromon extends Model
     protected $fillable = [
         'rol_description',
         'rol_id',
-        'rol_name'
+        'rol_name',
+        'bal_romeroball'
     ];
 
     /**

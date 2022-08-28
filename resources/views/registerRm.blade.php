@@ -43,7 +43,7 @@
                 <form action="/registerRm" method="POST" class="form-div2-register">
                     <input type="text" name="nr" id="" class="input-s1" placeholder="Nome do Romeromon">
                     <input type="text" name="dc" id="" placeholder="Descrição" class="input2-s1">
-                    <input type="text" name="pk" id="" placeholder="Pokebola" class="input-s1">
+                    <input type="text" name="rb" id="" placeholder="Romeroball" class="input-s1">
                     <label for="imageRomero" class="label-register">Anexar Imagem</label>
                     <input type="file" name="im" id="imageRomero">
                     <button class="button-register">Enviar</button>

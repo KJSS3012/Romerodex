@@ -20,8 +20,7 @@ class RomerodexController extends Controller
      */
     public function index()
     {
-        $register = Romeromon::all();
-        return view('home', ['romerodex' => $register]);
+        return view('home');
     }
 
     /**
@@ -42,6 +41,14 @@ class RomerodexController extends Controller
      */
     public function store(Request $request)
     {
+        $description = $request->post('dc');
+        $name = $request->post('nr');
+        $romeroball = $request->post('rb');
+        $romerodex = new Romeromon();
+        $romerodex->rom_description = $description;
+        $romerodex->rom_name = $name;
+        $romerodex->bal_romeroball = $romeroball;
+        $romerodex->save();
         return redirect(url('/romerodex/create'));
     }
 
