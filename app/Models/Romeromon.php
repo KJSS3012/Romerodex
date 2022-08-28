@@ -11,14 +11,13 @@ class Romeromon extends Model
 
     protected $fillable = [
         'rol_description',
-        'rol_id',
         'rol_name',
         'bal_romeroball'
     ];
 
     /**
      * Get the user that owns the Task
-     * 
+     *
      *
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
