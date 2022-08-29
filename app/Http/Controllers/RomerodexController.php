@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class RomerodexController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware(['auth']);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware(['auth']);
+    // }
 
     /**
      * Display a listing of the resource.
@@ -60,8 +60,9 @@ class RomerodexController extends Controller
      */
     public function show($id)
     {
-        $romeromon = Romeromon::find($id);
-        return view('list', ['romerodex' => $romeromon]);
+        // $romeromons = Romeromon::all();
+        return view('list');
+        // ->with('romerodex', $romeromons);
     }
 
     /**

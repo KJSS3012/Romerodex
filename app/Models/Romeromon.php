@@ -10,9 +10,8 @@ class Romeromon extends Model
     use HasFactory;
 
     protected $fillable = [
-        'rol_description',
-        'rol_id',
-        'rol_name',
+        'rom_description',
+        'rom_name',
         'bal_romeroball'
     ];
 

@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+@extends('layouts.default')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RomeroDex - Inicio</title>
-    <link rel="stylesheet" href="../../css/style.css">
-</head>
-<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+@section('title', 'Home')
 
-<body>
+@section('content')
     <header class="header-register">
         <img src="../img/Logo.png" alt="RomeroDex" class="logo" onclick="{{url('/home')}}">
         <form action="{{url('/logout')}}" method="post">
             <button class="button-h">Sair</button>
         </form>
-
     </header>
+
     <main class="main-homepage">
         <section class="section1-homepage">
             <div class="div-s1-homepage">
@@ -32,11 +24,9 @@
             </div>
         </section>
     </main>
+
     <footer class="footer-homepage">
         <div class="div1-f-homepage"></div>
         <div class="div2-f-homepage"></div>
     </footer>
-    <script type="text/javascript" src="{{asset(__DIR__ .'/../js/path.js')}}"></script>
-</body>
-
-</html>
+@endsection
