@@ -21,7 +21,7 @@
             <div class="div-s2-homepage">
                 <button class="button-homepage" onclick="link_list()">Histórico<span class="iconify-inline" data-icon="mdi:pokeball" data-width="38" data-height="38" style="color: #e3293b;"></span></button>
                 <button class="button-homepage" onclick="link_register()">Registrar<span class="iconify-inline" data-icon="mdi:pokeball" data-width="38" data-height="38" style="color: #e3293b;"></span></button>
-                <button href = {{url('/romerodex/about')}} class="button-homepage" onclick="link_owners()">Criadores<span class="iconify-inline" data-icon="mdi:pokeball" data-width="38" data-height="38" style="color: #e3293b;"></span></button>
+                <button class="button-homepage" onclick="link_owners()">Criadores<span class="iconify-inline" data-icon="mdi:pokeball" data-width="38" data-height="38" style="color: #e3293b;"></span></button>
             </div>
         </section>
     </main>

@@ -178,15 +178,17 @@ body{
 /*HOME PAGE - END*/
 
 /*OWNERS PAGE*/
-.body-owners{
-    background-image: url(../img/pokeball.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-size: 25%;
-    background-attachment: fixed;
+.div-image-owners {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.image-owners{
+    width: 75%;
+}
+
 .header-owners{
     background-color: #E3293B;
     display: flex;
