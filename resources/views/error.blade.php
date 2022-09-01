@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+@extends('layouts.default')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Erro 404</title>
-</head>
+@section('title', 'Error')
 
-<body>
+@section('content')
     <header class="header-error">
         <img src="../img/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
     </header>
@@ -30,7 +23,4 @@
         <div class="div1-f-error"></div>
         <div class="div2-f-error"></div>
     </footer>
-    <script type="text/javascript" src="../../public/js/path.js"></script>
-</body>
-
-</html>
+@endsection

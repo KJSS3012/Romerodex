@@ -6,6 +6,7 @@
     <header class="header-register">
         <img src="../img/Logo.png" alt="RomeroDex" class="logo" onclick="{{url('/home')}}">
         <form action="{{url('/logout')}}" method="post">
+            @csrf
             <button class="button-h">Sair</button>
         </form>
     </header>
