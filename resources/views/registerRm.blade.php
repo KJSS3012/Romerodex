@@ -13,10 +13,15 @@
                 <h1 class="h1-s1-register">Registrar</h1>
             </div>
             <div class="div2-s1-register">
-                <form action="/registerRm" method="POST" class="form-div2-register">
-                    <input type="text" name="nr" id="" class="input-s1" placeholder="Nome do Romeromon">
-                    <input type="text" name="dc" id="" placeholder="Descrição" class="input2-s1">
-                    <input type="text" name="rb" id="" placeholder="Romeroball" class="input-s1">
+                <form action="{{url('/romerodex')}}" method="POST" class="form-div2-register">
+                    @csrf
+                    <input type="text" name="nr" class="input-s1" placeholder="Nome do Romeromon">
+                    <input type="text" name="dc" placeholder="Descrição" class="input2-s1">
+                      <select name="rb">
+                        @foreach($romeroballs as $balls)
+                        <option value="{{$balls->bal_id}}">{{$balls->bal_romeroball}}</option>
+                        @endforeach
+                      </select>
                     <label for="imageRomero" class="label-register">Anexar Imagem</label>
                     <input type="file" name="im" id="imageRomero">
                     <button class="button-register">Enviar</button>

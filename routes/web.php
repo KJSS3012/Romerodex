@@ -25,4 +25,3 @@ Route::get('/romerodex/about', function () {
 Route::resource('/romerodex', RomerodexController::class);
 
 require __DIR__ . '/auth.php';
-{{  }}
