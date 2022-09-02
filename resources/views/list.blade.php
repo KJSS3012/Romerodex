@@ -9,11 +9,13 @@
 	</header>
 
 	<main class="main-list">
-		{{-- <ul>
-			@foreach($romerodex as $romeromon)
-				<li> {{ $romeromon->rom_nome }}
-			@endforeach
-		</ul> --}}
+		@foreach($romeromons as $romeros)
+			@if($romeros->rom_use_id == auth()->user()->id)
+				<div class="div1-m">
+					<p class="div1-m">{{ $romeros->rom_name }}</p>
+				</div>
+			@endif
+		@endforeach
 	</main>	
 
 	<footer class="footer-list">
