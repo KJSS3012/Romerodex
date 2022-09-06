@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Romeroball;
 use App\Models\Romeromon;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RomerodexController extends Controller
 {
@@ -30,7 +33,8 @@ class RomerodexController extends Controller
      */
     public function create()
     {
-        return view('registerRm');
+        $romeroballs = Romeroball::all();
+        return view('registerRm', ['romeroballs' => $romeroballs]);
     }
 
     /**
@@ -41,13 +45,16 @@ class RomerodexController extends Controller
      */
     public function store(Request $request)
     {
-        $description = $request->post('dc');
-        $name = $request->post('nr');
-        $romeroball = $request->post('rb');
         $romerodex = new Romeromon();
-        $romerodex->rom_description = $description;
+
+        $name = $request->post('nr');
+        $description = $request->post('dc');
+        $romeroball = $request->post('rb');
+
         $romerodex->rom_name = $name;
-        $romerodex->bal_romeroball = $romeroball;
+        $romerodex->rom_description = $description;
+        $romerodex->rom_bal_id = $romeroball;
+        $romerodex->rom_use_id = auth()->user()->id;
         $romerodex->save();
         return redirect(url('/romerodex/create'));
     }
@@ -58,10 +65,10 @@ class RomerodexController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        $romeromon = Romeromon::find($id);
-        return view('list', ['romerodex' => $romeromon]);
+        $romeromons = Romeromon::all();
+        return view('list', ['romeromons' => $romeromons]);
     }
 
     /**

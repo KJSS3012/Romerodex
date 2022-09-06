@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('rom_bal_id');
             $table->unsignedBigInteger('rom_use_id');
             $table->foreign('rom_bal_id')->references('bal_id')->on('romeroballs');
-            $table->foreign('rom_use_id')->references('use_id')->on('users');
+            $table->foreign('rom_use_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

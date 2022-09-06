@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+@extends('layouts.default')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Criadores</title>
-</head>
+@section('title', 'Owners')
 
-<body class="body-owners">
+@section('content')
     <header class="header-owners">
         <img src="../img/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
         <button class="button-h" onclick="link_homepage()">Voltar</button>
@@ -19,6 +12,10 @@
             <p class="p-owners">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat massa, pulvinar in arcu at, aliquet tempus lacus. Morbi dictum interdum velit vitae porttitor. Nam non turpis urna. Donec efficitur vitae quam ac accumsan. Proin egestas ornare facilisis. Aliquam erat volutpat. Integer eget egestas mi. Vestibulum ullamcorper at est in accumsan.</p>
         </section>
 
+        <div class="div-image-owners">
+            <img class="image-owners" src="../../img/pokeball.png" alt="">
+        </div>
+
         <section class="section2-owners">
             <p class="p-owners">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat massa, pulvinar in arcu at, aliquet tempus lacus. Morbi dictum interdum velit vitae porttitor. Nam non turpis urna. Donec efficitur vitae quam ac accumsan. Proin egestas ornare facilisis. Aliquam erat volutpat. Integer eget egestas mi. Vestibulum ullamcorper at est in accumsan.</p>
         </section>
@@ -27,6 +24,4 @@
         <div class="div1-f-owners"></div>
         <div class="div2-f-owners"></div>
     </footer>
-    <script type="text/javascript" src="../../public/js/path.js"></script>
-</body>
-</html>
+@endsection
