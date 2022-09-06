@@ -14,7 +14,7 @@ h1{
 }
 
 body{
-    background-color: #D1D1D1;
+    background-color: #f5f5f5;
     overflow: hidden;
 }
 
@@ -25,6 +25,74 @@ body{
     cursor: pointer;
 }
 /*REGISTER PAGE*/
+.section-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section_div-register {
+    background-color: #CC3342;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 2rem 0.5rem rgba(28, 49, 68, 0.5);
+}
+
+.section_div_image-register {
+    margin: 10px 0;
+}
+
+.section_div_image_pokeball-register {
+    width: 150px;
+}
+
+.section_div_form-register {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.section_div_form-register input {
+    font-weight: bold;
+    padding: 0 15px;
+    margin-top: 12px;
+    background-color: #E3F2FD;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    width: 250px;
+    height: 45px;
+}
+
+.section_div_form-register input::placeholder {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+
+.section_div_form-register input:hover {
+    outline: rgba(227, 242, 253, 0.5) solid 0.25rem;
+}
+
+.section_div_form-register input[type="submit"] {
+    color: #E3F2FD;
+    display: block;
+    background-color: #1C3144;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.section_div_form-register input[type="submit"]:hover {
+    outline: rgba(28, 49, 68, 0.5) solid 0.25rem;
+}
 
 /*REGISTER PAGE END*/
 
@@ -45,10 +113,13 @@ body{
 }
 
 .div1-s1-login {
+    background-color: #CC3342;
+    padding: 1rem 3rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 0 2rem 0.5rem rgba(28, 49, 68, 0.5);
 }
 
 .form1-s1-login {
@@ -76,20 +147,23 @@ body{
     font-size: 14px;
 }
 
+.form1-s1-login input:hover {
+    outline: rgba(227, 242, 253, 0.5) solid 0.25rem;
+}
+
 .form1-s1-login input[type="submit"] {
     color: #E3F2FD;
     display: block;
-    background-color: #DB5461;
+    background-color: #1C3144;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 15px;
     cursor: pointer;
-    transition: all 400ms;
 }
 
 .form1-s1-login input[type="submit"]:hover {
-    background-color: #CC3342;
+    outline: rgba(28, 49, 68, 0.5) solid 0.25rem;
 }
 
 .div3-s1-login {
@@ -101,11 +175,13 @@ body{
 
 .div3-s1-login p {
     color: #E3F2FD;
+    text-shadow: 0 0 0.25rem #1C3144;
 }
 
 .div3-s1-login a {
     color: #5568fe;
     text-decoration: none;
+    text-shadow: 0 0 0.25rem #1C3144;
 }
 /*LOGIN PAGE END*/
 
@@ -148,7 +224,7 @@ body{
 }
 
 .button-homepage:hover{
-    -webkit-box-shadow: 0px 6px 25px 16px rgba(227,41,59,0.53); 
+    -webkit-box-shadow: 0px 6px 25px 16px rgba(227,41,59,0.53);
     box-shadow: 0px 6px 25px 16px rgba(227,41,59,0.53);
     cursor: pointer;
     background-color: #1C3144;
