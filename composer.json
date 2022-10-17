@@ -1,21 +1,4 @@
 {
-<<<<<<< HEAD
-    "name": "cfhjk/romerodex",
-    "description": "Um site para registrar os treinadores e seus romeromons",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "Cfhjk\\Romerodex\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "CFHJK",
-            "email": "kaique30122004@gmail.com"
-        }
-    ],
-    "require": {}
-=======
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
@@ -80,5 +63,4 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
->>>>>>> 62b859fdedd7703d03e011e9ddc4b64dfe3b8226
 }
