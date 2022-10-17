@@ -22,6 +22,8 @@ Route::get('/romerodex/about', function () {
     return view('owners');
 });
 
+Route::get('/romerodex/history',[RomerodexController::class, 'history']);
+
 Route::resource('/romerodex', RomerodexController::class);
 
 require __DIR__ . '/auth.php';

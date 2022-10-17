@@ -12,7 +12,7 @@
 		@foreach($romeromons as $romeros)
 			@if($romeros->rom_use_id == auth()->user()->id)
 				<div class="div1-m">
-					<p class="div1-m">{{ $romeros->rom_name }}</p>
+					<a class="div1-m" href="{{url('/romerodex', $romeros->rom_id)}}">{{ $romeros->rom_name }}</a>
 				</div>
 			@endif
 		@endforeach

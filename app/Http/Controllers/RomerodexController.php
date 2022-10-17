@@ -7,6 +7,7 @@ use App\Models\Romeromon;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class RomerodexController extends Controller
 {
@@ -59,16 +60,25 @@ class RomerodexController extends Controller
         return redirect(url('/romerodex/create'));
     }
 
+    public function history()
+    {
+        $romeromons = Romeromon::all();
+        return view('list', ['romeromons' => $romeromons]);
+    }
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $romeromons = Romeromon::all();
-        return view('list', ['romeromons' => $romeromons]);
+        $romeromon = DB::table('romeromons')->where('rom_id','=',$id)->get();
+        $ball = DB::table('romeroballs')->join('romeromons','rom_bal_id','=','bal_id')->where('rom_id','=',$id)->get();
+        $romeromon = $romeromon[0];
+        $ball = $ball[0];
+        return view('show', ['romeromon' => $romeromon, 'romeroballs'=>$ball]);
     }
 
     /**

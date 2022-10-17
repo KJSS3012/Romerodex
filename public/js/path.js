@@ -5,7 +5,7 @@ function link_homepage(){
     location.href = "/romerodex";
 }
 function link_list() {
-    location.href = "/romerodex/show"
+    location.href = "/romerodex/history"
 }
 function link_register() {
     location.href = "/romerodex/create"
