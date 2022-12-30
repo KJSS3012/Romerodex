@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Romeroball;
 use App\Models\Romeromon;
 use App\Models\User;
+use App\Notifications\RomemormonCadastrado;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -57,6 +58,9 @@ class RomerodexController extends Controller
         $romerodex->rom_bal_id = $romeroball;
         $romerodex->rom_use_id = auth()->user()->id;
         $romerodex->save();
+        
+        $ball = DB::table('romeroballs')->where('bal_id','=',$romeroball)->get();
+        Auth::user()->notify(new RomemormonCadastrado($romerodex,$ball[0]));
         return redirect(url('/romerodex/create'));
     }
 
