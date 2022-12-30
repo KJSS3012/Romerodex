@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Romeroball;
 use App\Models\Romeromon;
 use App\Models\User;
+use App\Notifications\RomemormonAlterado;
 use App\Notifications\RomemormonCadastrado;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -82,7 +83,7 @@ class RomerodexController extends Controller
         $ball = DB::table('romeroballs')->join('romeromons','rom_bal_id','=','bal_id')->where('rom_id','=',$id)->get();
         $romeromon = $romeromon[0];
         $ball = $ball[0];
-        return view('show', ['romeromon' => $romeromon, 'romeroballs'=>$ball]);
+        return view('show', ['romeromon' => $romeromon, 'romeroballs'=>$ball, 'id' => $id]);
     }
 
     /**
@@ -93,7 +94,7 @@ class RomerodexController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**
@@ -105,7 +106,14 @@ class RomerodexController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $name = $request->post('nr');
+        $description = $request->post('dc');
+        $romeromon = DB::table('romeromons')->where('rom_id','=',$id)->get();
+        $aux = $romeromon[0];
+        DB::table('romeromons')->where('rom_id','=',$id)->update(['rom_name' =>$name, 'rom_description' => $description]);
+        Auth::user()->notify(new RomemormonAlterado($aux,$romeromon[0]));
+        $romeromons = Romeromon::all();
+        return view('list', ['romeromons' => $romeromons]);
     }
 
     /**

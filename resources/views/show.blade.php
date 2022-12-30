@@ -13,10 +13,11 @@
                 <h1 class="h1-s1-register">Registrar</h1>
             </div>
             <div class="div2-s1-register">
-                <form action="{{url('/romerodex')}}" method="POST" class="form-div2-register">
+                <form action="{{url('/romerodex', ['id'=>$id])}}" method="POST" class="form-div2-register">
                     @csrf
-                    <input type="text" name="nr" class="input-s1" placeholder="Nome do Romeromon" readonly value="{{$romeromon->rom_name}}">
-                    <input type="text" name="dc" placeholder="Descrição" class="input2-s1" readonly value="{{$romeromon->rom_description}}">
+                    @method('PUT')
+                    <input type="text" name="nr" class="input-s1" placeholder="Nome do Romeromon" value="{{$romeromon->rom_name}}">
+                    <input type="text" name="dc" placeholder="Descrição" class="input2-s1" value="{{$romeromon->rom_description}}">
                     <input type="text" class="input-s1" readonly value="{{$romeroballs->bal_romeroball}}">
                     <button class="button-register">Editar</button>
                 </form>
