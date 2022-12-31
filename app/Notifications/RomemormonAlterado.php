@@ -16,12 +16,10 @@ class RomemormonAlterado extends Notification
      *
      * @return void
      */
-    public $oldromeromon;
-    public $newromeromon;
-    public function __construct($oldromeromon,$newromeromon)
+    public $romeromon;
+    public function __construct($romeromon)
     {
-        $this->oldromeromon = $oldromeromon;
-        $this->newromeromon = $newromeromon;
+        $this->romeromon = $romeromon;
     }
 
     /**
@@ -45,8 +43,7 @@ class RomemormonAlterado extends Notification
     {
         return (new MailMessage)
                     ->line('Um Romeromon foi modificado')
-                    ->line('Nome: '.$this->oldromeromon->rom_name.' se torna '.$this->newromeromon->rom_name)
-                    ->line('Descrição: '.$this->oldromeromon->rom_description.' se torna '.$this->newromeromon->rom_description);
+                    ->line('Nome: '.$this->romeromon->rom_name);
     }
 
     /**

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('romeroballs', function (Blueprint $table) {
             $table->id('bal_id');
             $table->string('bal_romeroball');
+            $table->timestamps();
         });
     }
 

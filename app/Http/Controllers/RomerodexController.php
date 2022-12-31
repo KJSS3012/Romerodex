@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SolicitarAjudaMail;
 use App\Models\Romeroball;
 use App\Models\Romeromon;
 use App\Models\User;
@@ -10,6 +11,7 @@ use App\Notifications\RomemormonCadastrado;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class RomerodexController extends Controller
 {
@@ -40,6 +42,13 @@ class RomerodexController extends Controller
         return view('registerRm', ['romeroballs' => $romeroballs]);
     }
 
+    public function mail()
+    {
+        $destiny = User::find(1);
+        Mail::to($destiny)->send(new SolicitarAjudaMail(Auth::user()));
+        return view('home');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -59,9 +68,9 @@ class RomerodexController extends Controller
         $romerodex->rom_bal_id = $romeroball;
         $romerodex->rom_use_id = auth()->user()->id;
         $romerodex->save();
-        
-        $ball = DB::table('romeroballs')->where('bal_id','=',$romeroball)->get();
-        Auth::user()->notify(new RomemormonCadastrado($romerodex,$ball[0]));
+
+        $ball = DB::table('romeroballs')->where('bal_id', '=', $romeroball)->get();
+        Auth::user()->notify(new RomemormonCadastrado($romerodex, $ball[0]));
         return redirect(url('/romerodex/create'));
     }
 
@@ -79,11 +88,11 @@ class RomerodexController extends Controller
      */
     public function show($id)
     {
-        $romeromon = DB::table('romeromons')->where('rom_id','=',$id)->get();
-        $ball = DB::table('romeroballs')->join('romeromons','rom_bal_id','=','bal_id')->where('rom_id','=',$id)->get();
+        $romeromon = DB::table('romeromons')->where('rom_id', '=', $id)->get();
+        $ball = DB::table('romeroballs')->join('romeromons', 'rom_bal_id', '=', 'bal_id')->where('rom_id', '=', $id)->get();
         $romeromon = $romeromon[0];
         $ball = $ball[0];
-        return view('show', ['romeromon' => $romeromon, 'romeroballs'=>$ball, 'id' => $id]);
+        return view('show', ['romeromon' => $romeromon, 'romeroballs' => $ball, 'id' => $id]);
     }
 
     /**
@@ -94,7 +103,6 @@ class RomerodexController extends Controller
      */
     public function edit($id)
     {
-       
     }
 
     /**
@@ -108,10 +116,9 @@ class RomerodexController extends Controller
     {
         $name = $request->post('nr');
         $description = $request->post('dc');
-        $romeromon = DB::table('romeromons')->where('rom_id','=',$id)->get();
-        $aux = $romeromon[0];
-        DB::table('romeromons')->where('rom_id','=',$id)->update(['rom_name' =>$name, 'rom_description' => $description]);
-        Auth::user()->notify(new RomemormonAlterado($aux,$romeromon[0]));
+        $romeromon = DB::table('romeromons')->where('rom_id', '=', $id)->get();
+        DB::table('romeromons')->where('rom_id', '=', $id)->update(['rom_name' => $name, 'rom_description' => $description]);
+        Auth::user()->notify(new RomemormonAlterado($romeromon[0]));
         $romeromons = Romeromon::all();
         return view('list', ['romeromons' => $romeromons]);
     }

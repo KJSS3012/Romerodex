@@ -5,6 +5,7 @@
 @section('content')
     <header class="header-owners">
         <img src="../img/Logo.png" alt="RomeroDex" class="logo" onclick="link_homepage()">
+        <button class="button-h" onclick="link_mail()">Ajuda</button>
         <button class="button-h" onclick="link_homepage()">Voltar</button>
     </header>
     <main class="main-owners">

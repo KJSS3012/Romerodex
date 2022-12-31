@@ -23,6 +23,7 @@ Route::get('/romerodex/about', function () {
 });
 
 Route::get('/romerodex/history',[RomerodexController::class, 'history']);
+Route::get('/romerodex/mail',[RomerodexController::class, 'mail']);
 
 Route::resource('/romerodex', RomerodexController::class);
 
