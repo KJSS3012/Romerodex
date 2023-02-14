@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class RomerodexController extends Controller
 {
@@ -67,6 +68,12 @@ class RomerodexController extends Controller
         $romerodex->rom_description = $description;
         $romerodex->rom_bal_id = $romeroball;
         $romerodex->rom_use_id = auth()->user()->id;
+
+        // Image Add
+        $imageName = $request->file('image')->getClientOriginalName();
+        $request->file('image')->storeAs('romeromon',$imageName);
+        $romerodex->image = "storage/romeromon/$imageName";
+
         $romerodex->save();
 
         $ball = DB::table('romeroballs')->where('bal_id', '=', $romeroball)->get();

@@ -13,7 +13,7 @@
                 <h1 class="h1-s1-register">Registrar</h1>
             </div>
             <div class="div2-s1-register">
-                <form action="{{url('/romerodex')}}" method="POST" class="form-div2-register">
+                <form action="{{url('/romerodex')}}" method="POST" class="form-div2-register" enctype="multipart/form-data">
                     @csrf
                     <input type="text" name="nr" class="input-s1" placeholder="Nome do Romeromon">
                     <input type="text" name="dc" placeholder="Descrição" class="input2-s1">
@@ -23,7 +23,7 @@
                         @endforeach
                       </select>
                     <label for="imageRomero" class="label-register">Anexar Imagem</label>
-                    <input type="file" name="im" id="imageRomero">
+                    <input type="file" name="image" id="imageRomero">
                     <button class="button-register">Enviar</button>
                 </form>
             </div>

@@ -41,11 +41,14 @@ class RegisteredUserController extends Controller
             'imagem' => ['mimes:jpeg,jpg,png'],
         ]);
 
+        $imageName = $request->file('image')->getClientOriginalName();
+        $request->file('image')->storeAs('user',$imageName);
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'image' => $request->image,
+            'image' => "storage/user/$imageName",
         ]);
 
         event(new Registered($user));

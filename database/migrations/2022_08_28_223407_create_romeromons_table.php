@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('rom_description');
             $table->unsignedBigInteger('rom_bal_id');
             $table->unsignedBigInteger('rom_use_id');
+            $table->string('image')->nullable();
             $table->foreign('rom_bal_id')->references('bal_id')->on('romeroballs');
             $table->foreign('rom_use_id')->references('id')->on('users');
             $table->timestamps();

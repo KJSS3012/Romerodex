@@ -29,7 +29,7 @@
             </div>
             <div class="div2-s2-register"></div>
             <div class="div3-s2-register">
-                <img src="../img/Romeroju.png" alt="Romeroju" id="image">
+                <img src="{{asset($romeromon->image)}}" alt="{{$romeromon->rom_name}}" id="image">
             </div>
         </section>
     </main>
