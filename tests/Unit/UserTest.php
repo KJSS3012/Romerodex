@@ -10,6 +10,13 @@ class UserTest extends TestCase
 {
     use RefreshDatabase;
     use WithFaker; 
+    
+    public function test_name_null() {
+        $user = User::factory()->make(['name' => null]);
+        $validator = validator($user->toArray(), User::validationRules());
+
+        $this->assertTrue($validator->fails());
+    }
 
     public function test_check_columns_users() {
         $user = new User;
@@ -19,7 +26,7 @@ class UserTest extends TestCase
         $this->assertEquals(0, count($compared));
     }
 
-    public function testUserEmailIsRequired() {
+    public function test_user_email_IsRequired() {
         $user = User::factory()->make(['email' => null]);
         $validator = validator($user->toArray(), User::validationRules());
 
