@@ -70,9 +70,9 @@ class RomerodexController extends Controller
         $romerodex->rom_use_id = auth()->user()->id;
 
         // Image Add
-        $imageName = $request->file('image')->getClientOriginalName();
-        $request->file('image')->storeAs('romeromon',$imageName);
-        $romerodex->image = "storage/romeromon/$imageName";
+        // $imageName = $request->file('image')->getClientOriginalName();
+        // $request->file('image')->storeAs('romeromon',$imageName);
+        // $romerodex->image = "storage/romeromon/$imageName";
 
         $romerodex->save();
 
