@@ -58,6 +58,13 @@ class RomerodexController extends Controller
      */
     public function store(Request $request)
     {
+        
+        $validated = $request->validate([
+            'nr' => 'required|min:3',
+            'dc' => 'required|max:255',
+            'rb' => 'required'
+        ]);
+        
         $romerodex = new Romeromon();
 
         $name = $request->post('nr');

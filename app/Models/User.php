@@ -47,7 +47,7 @@ class User extends Authenticatable
     public static function validationRules($id = null)
     {
         $rules = [
-            'name' => 'required|string|max:255',
+            'name' => 'required',
             'email' => [
                 'required',
                 'string',

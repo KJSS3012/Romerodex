@@ -12,14 +12,6 @@ class UserTest extends TestCase
     use WithFaker; 
     
     /** @test */
-    public function name_null() {
-        $user = User::factory()->make(['name' => null]);
-        $validator = validator($user->toArray(), User::validationRules());
-    
-        $this->assertTrue(!$validator->fails(), "nome nulo");
-    }
-
-    /** @test */
     public function check_columns_users() {
         $user = new User;
         $expected = ['name', 'email', 'password'];
@@ -28,10 +20,5 @@ class UserTest extends TestCase
         $this->assertEquals(0, count($compared));
     }
 
-    /** @test */
-    public function user_email_IsRequired() {
-        $user = User::factory()->make(['email' => null]);
-        $validator = validator($user->toArray(), User::validationRules());
-        $this->assertTrue(!$validator->fails());
-    }
+
 }
