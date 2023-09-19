@@ -42,6 +42,11 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
+        
+        'factories' => [
+            'namespace' => 'Database\\Factories',
+        ],
+        
 
         'mysql' => [
             'driver' => 'mysql',

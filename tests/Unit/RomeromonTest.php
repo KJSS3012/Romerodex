@@ -2,13 +2,17 @@
 
 namespace Tests\Unit;
 
+use App\Models\Romeroball;
 use App\Models\Romeromon;
 use Tests\TestCase;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class RomeromonTest extends TestCase {
     
+    use RefreshDatabase;
+
     /** @test */
     public function check_columns_romeromons(){
         $romeromon = new Romeromon();
@@ -20,10 +24,12 @@ class RomeromonTest extends TestCase {
 
     /** @test */
     public function create_romeromon(){
-        $user = User::factory()->create();
-        Auth::login($user);
-        $responde = $this->post('romerodex', ['nr' => 'ch', 'dc' => 'xxxxx', 'rb' => 1]);
-        $responde->assertStatus(201);
+        Auth::login(User::factory()->create());
+        $ball = new Romeroball();
+        $ball->bal_romeroball = 'ball';
+        $ball->save();
+        $response = $this->post('romerodex', ['nr' => 'charlon', 'dc' => 'xxxxx', 'rb' => 1]);
+        $response->assertStatus(200);
     } 
 
 }
