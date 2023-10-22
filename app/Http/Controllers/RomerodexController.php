@@ -46,7 +46,7 @@ class RomerodexController extends Controller
     public function mail()
     {
         $destiny = User::find(1);
-        Mail::to($destiny)->send(new SolicitarAjudaMail(Auth::user()));
+        // Mail::to($destiny)->send(new SolicitarAjudaMail(Auth::user()));
         return view('home');
     }
 
@@ -84,7 +84,7 @@ class RomerodexController extends Controller
         $romerodex->save();
 
         $ball = DB::table('romeroballs')->where('bal_id', '=', $romeroball)->get();
-        Auth::user()->notify(new RomemormonCadastrado($romerodex, $ball[0]));
+        // Auth::user()->notify(new RomemormonCadastrado($romerodex, $ball[0]));
         return redirect(url('/romerodex/create'));
     }
 
@@ -132,7 +132,7 @@ class RomerodexController extends Controller
         $description = $request->post('dc');
         $romeromon = DB::table('romeromons')->where('rom_id', '=', $id)->get();
         DB::table('romeromons')->where('rom_id', '=', $id)->update(['rom_name' => $name, 'rom_description' => $description]);
-        Auth::user()->notify(new RomemormonAlterado($romeromon[0]));
+        // Auth::user()->notify(new RomemormonAlterado($romeromon[0]));
         $romeromons = Romeromon::all();
         return view('list', ['romeromons' => $romeromons]);
     }
